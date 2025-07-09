@@ -1,3 +1,8 @@
+![AWS Terraform CI/CD Project](https://img.shields.io/badge/Built%20with-Terraform-blue?style=flat-square)
+![GitLab CI/CD](https://img.shields.io/badge/CI%2FCD-GitLab-orange?style=flat-square)
+![AWS](https://img.shields.io/badge/Cloud-AWS-brightgreen?style=flat-square)
+
+
 # 3-Tier Web Application on AWS with Terraform & GitLab CI/CD
 
 This project demonstrates deploying a 3-tier architecture (Web, App, DB) on AWS using **Terraform** for Infrastructure as Code (IaC) and **GitLab CI/CD** for automation.
