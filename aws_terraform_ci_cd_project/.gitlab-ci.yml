@@ -1,0 +1,29 @@
+stages:
+  - validate
+  - plan
+  - apply
+
+variables:
+  TF_VAR_db_user: "admin"
+  TF_VAR_db_pass: "securepass123"
+
+validate:
+  stage: validate
+  script:
+    - terraform init
+    - terraform fmt -check
+    - terraform validate
+
+plan:
+  stage: plan
+  script:
+    - terraform plan -out=tfplan
+  artifacts:
+    paths:
+      - tfplan
+
+apply:
+  stage: apply
+  when: manual
+  script:
+    - terraform apply -auto-approve tfplan
